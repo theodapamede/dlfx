@@ -3,7 +3,7 @@ name = "DLUtils"
 version = "0.1.0"
 description = "Utils package"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = [
     "matplotlib",
     "numpy<2",
