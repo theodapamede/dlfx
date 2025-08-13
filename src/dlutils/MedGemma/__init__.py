@@ -1,4 +1,4 @@
-from .compute_accuracy import compute_accuracy
+from .compute_accuracy import compute_accuracy, analyze_errors
 from .display_prediction import display_prediction
 from .plot_images_grid import plot_images_grid
 from .preprocess import preprocess
