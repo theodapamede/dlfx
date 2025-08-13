@@ -10,7 +10,7 @@ def display_prediction(output, example, figsize=(8, 6)):
         example: Example data containing the true label under 'Pathology' key
         figsize: Figure size as (width, height) tuple (default: (8, 6))
     """
-    img_arr = np.array(output[0]['input_text'][1]['content'][1]['image'])
+    img_arr = np.array(output[0]['input_text'][1]['content'][-1]['image'])
     plt.figure(figsize=figsize)
     plt.imshow(img_arr)
     plt.title(f'Prediction: {output[0]["generated_text"].strip()}\nLabel: {example["Pathology"]}')
