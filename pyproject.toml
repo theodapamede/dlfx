@@ -19,5 +19,5 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project.urls]
-Homepage = "https://github.com/theodapamede/DLUtils"
-"Bug Tracker" = "https://github.com/theodapamede/DLUtils/issues"
+Homepage = "https://github.com/theodapamede/dlfx"
+"Bug Tracker" = "https://github.com/theodapamede/dlfx/issues"
