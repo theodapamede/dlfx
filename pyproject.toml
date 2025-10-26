@@ -21,3 +21,6 @@ build-backend = "hatchling.build"
 [project.urls]
 Homepage = "https://github.com/theodapamede/dlfx"
 "Bug Tracker" = "https://github.com/theodapamede/dlfx/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["dflx"]
