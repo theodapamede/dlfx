@@ -1,6 +1,6 @@
 # dlfx
 
-A collection of Python utility functions.
+A collection of utility functions for medical imaging.
 
 ## Installation
 
