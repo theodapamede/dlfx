@@ -15,8 +15,8 @@ uv add git+https://github.com/theodapamede/dlfx.git
 Import the package as follows:
 
 ```python
-import dlutils as dlu
+import dlfx
 
 # Example usage:
-# flat_dcm = dlu.flatten_dicom_dataset(dicom)
+# flat_dcm = dlfx.flatten_dicom_dataset(dicom)
 ```
