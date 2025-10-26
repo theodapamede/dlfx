@@ -7,7 +7,7 @@ A collection of utility functions for medical imaging.
 You can install the package using uv:
 
 ```bash
-uv add git+https://github.com/theodapamede/dlfx.git
+uv add dlfx
 ```
 
 ## Usage
