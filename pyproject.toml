@@ -1,7 +1,11 @@
 [project]
-name = "DLUtils"
+name = "dlfx"
 version = "0.1.2"
-description = "Utils package"
+authors = [
+  { name="Theo Dapamede", email="theo.dapamede@emory.edu" },
+  { name="Frank Li", email="frank.li@emory.edu" },
+]
+description = "A collection of utility functions for medical imaging."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -11,5 +15,9 @@ dependencies = [
 ]
 
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+Homepage = "https://github.com/theodapamede/DLUtils"
+"Bug Tracker" = "https://github.com/theodapamede/DLUtils/issues"
