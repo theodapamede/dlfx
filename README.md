@@ -7,7 +7,7 @@ A collection of Python utility functions.
 You can install the package using uv:
 
 ```bash
-uv add git+https://github.com/theodapamede/DLUtils.git
+uv add git+https://github.com/theodapamede/dlfx.git
 ```
 
 ## Usage
