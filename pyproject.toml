@@ -1,6 +1,6 @@
 [project]
 name = "dlfx"
-version = "0.1.5"
+version = "0.1.6"
 authors = [
   { name="Theo Dapamede", email="theo.dapamede@emory.edu" },
   { name="Frank Li", email="frank.li@emory.edu" },
@@ -11,8 +11,7 @@ requires-python = ">=3.10"
 dependencies = [
     "matplotlib",
     "numpy",
-    "pydicom",
-    "ipynbname"
+    "pydicom"
 ]
 
 [build-system]

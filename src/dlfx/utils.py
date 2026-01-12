@@ -1,34 +1,33 @@
 import os
 import datetime
-import ipynbname
 from IPython.display import display, Markdown
 
-def stamp_notebook(created_date, author=""):
+def stamp_notebook(created_date, author="", notebook_path=None):
     """
-    Displays a formatted session info block. 
-    Automatically detects the notebook name and last modification time.
+    Displays a formatted info block to track notebook creation and modification.
+    Distinct from DICOM/Image metadata.
+    
+    Args:
+        created_date (str): The date the notebook was created (e.g., "2025-08-15").
+        author (str): Researcher name.
+        notebook_path (str): The filename of the .ipynb file to pull 'Last Modified' stats.
     """
-    try:
-        # Get the full path and the filename of the current notebook
-        nb_path = ipynbname.path()
-        nb_name = ipynbname.name() + ".ipynb"
-        
-        # Get last modified time from the filesystem
-        mtime = os.path.getmtime(nb_path)
-        last_mod = datetime.datetime.fromtimestamp(mtime).strftime('%Y-%m-%d %H:%M:%S')
-    except Exception:
-        # Fallback if ipynbname cannot detect the notebook (e.g. running as a script)
-        nb_name = "Detection failed (run in Jupyter)"
-        last_mod = "Unknown"
-
     info_lines = [
         "**Notebook Session Info:**",
-        f"* **File:** `{nb_name}`",
         f"* **Created:** {created_date}",
-        f"* **Last Modified:** {last_mod}",
-        f"* **Researcher:** {author}"
     ]
+    
+    # Check if we can pull filesystem modification time
+    if notebook_path and os.path.exists(notebook_path):
+        mtime = os.path.getmtime(notebook_path)
+        last_mod = datetime.datetime.fromtimestamp(mtime).strftime('%Y-%m-%d %H:%M:%S')
+        info_lines.append(f"* **Last Modified:** {last_mod}")
+    else:
+        info_lines.append("* **Last Modified:** (Run save to update / path not found)")
+        
+    info_lines.append(f"* **Researcher:** {author}")
 
+    # Render as a clean Markdown block
     display(Markdown("---"))
     display(Markdown("\n".join(info_lines)))
     display(Markdown("---"))
