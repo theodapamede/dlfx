@@ -1,6 +1,6 @@
 [project]
 name = "dlfx"
-version = "0.1.6"
+version = "0.1.7"
 authors = [
   { name="Theo Dapamede", email="theo.dapamede@emory.edu" },
   { name="Frank Li", email="frank.li@emory.edu" },
